@@ -69,10 +69,19 @@ public class Juego extends JPanel {
                     setOpaque(false);
                     fondo1.paint(g);
                 break;
+            case 5: Image img5 = new ImageIcon(getClass().getResource("Ciudad3.png")).getImage();
+                    g.drawImage(img5, 0, 0,getWidth(),getHeight(),this);
+                    setOpaque(false);
+                    fondo1.paint(g);
+                break;
+            case 6: Image img6 = new ImageIcon(getClass().getResource("Ciudad3.png")).getImage();
+                    g.drawImage(img6, 0, 0,getWidth(),getHeight(),this);
+                    setOpaque(false);
+                    fondo1.paint(g);
+                break;
         }
         g.setColor(Color.BLACK);
         personaje1.paint(g);
-
         g.setColor(Color.red);
         obstaculo.paint(g);
 

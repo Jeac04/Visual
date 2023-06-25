@@ -1,26 +1,32 @@
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
-public class Teclas extends Thread{
+import javax.swing.ImageIcon;
+
+public class Teclas{
    static final int ANCHO = 100;
     static final int ALTO = 100;
-    int x = 50;
+    int x = 500;
     int y = 250;
     int y1 = 0;
     int x1 = 0;
     Juego jueguito;
+    Image img;
     boolean saltando = false;
     boolean sube = false;
     boolean baja = false;
     boolean izq = false;
     boolean der = false;
 
-    public Teclas(Juego jueguito) {
-        this.jueguito = jueguito;
+    public Teclas(Juego juego) {
+        this.jueguito = juego;
+        ImageIcon icon = new ImageIcon(getClass().getResource("personaje.png"));
+        img = icon.getImage();
     }
 
-    public void run() {
+    public void mover() {
         if (sube) {
             if (y > 0) {
                 y -= 70;
@@ -52,7 +58,7 @@ public class Teclas extends Thread{
     }
 
     public void paint(Graphics2D g) {
-        g.fillRect(x, y, ANCHO, ALTO);
+        g.drawImage(img, x, y, ANCHO, ALTO, null);
     }
 
     public void keyPressed(KeyEvent e) {
