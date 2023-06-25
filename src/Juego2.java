@@ -67,12 +67,12 @@ public class Juego2 extends JPanel {
                     setOpaque(false);
                     fondo1.paint(g);
                 break;
-            case 5: Image img5 = new ImageIcon(getClass().getResource("Ciudad3.png")).getImage();
+            case 5: Image img5 = new ImageIcon(getClass().getResource("Ciudad4.png")).getImage();
                     g.drawImage(img5, 0, 0,getWidth(),getHeight(),this);
                     setOpaque(false);
                     fondo1.paint(g);
                 break;
-            case 6: Image img6 = new ImageIcon(getClass().getResource("Ciudad3.png")).getImage();
+            case 6: Image img6 = new ImageIcon(getClass().getResource("Ciudad5.png")).getImage();
                     g.drawImage(img6, 0, 0,getWidth(),getHeight(),this);
                     setOpaque(false);
                     fondo1.paint(g);
